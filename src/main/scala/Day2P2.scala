@@ -2,12 +2,7 @@ import java.nio.file.{Files, Paths}
 
 object Day2P2 {
   def main(args: Array[String]): Unit = {
-
-    def min(a: Int, b: Int) = if (a > b) b else a
     def max(a: Int, b: Int) = if (a > b) a else b
-
-    val intmax: Int = 10000000
-
     def getRBG(play: String): (Int, Int, Int) = {
       var r, b, g = 0
       val ballsInfo = play.split(',').map(_.trim)
@@ -26,13 +21,6 @@ object Day2P2 {
     val powers = lines
       .split('\n')
       .map(game => {
-        val gameId = game
-          .substring(0, game.indexOf(":"))
-          .trim
-          .split(" ")
-          .reverse
-          .head
-          .toInt
         val cubesInfo = game.substring(game.indexOf(":") + 1).trim
         val rbgList = cubesInfo.split(";").map(getRBG)
         val totalRbgForThisGame = rbgList.foldLeft(0, 0, 0)((acc, curr) =>
