@@ -1,6 +1,6 @@
 import java.nio.file.{Files, Paths}
 
-object Flag2 {
+object Day1P2 {
 
   def main(args: Array[String]): Unit = {
     val digitsMap = Map(
@@ -43,7 +43,7 @@ object Flag2 {
     }
 
     val lines =
-      Files.readString(Paths.get(getClass.getResource("flag2.txt").toURI))
+      Files.readString(Paths.get(getClass.getResource("day1.txt").toURI))
 
     val newLines = lines.split('\n')
     val answer =

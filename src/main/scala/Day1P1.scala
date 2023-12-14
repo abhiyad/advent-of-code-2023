@@ -1,9 +1,9 @@
 import java.nio.file.{Files, Paths}
 
-object Flag1 {
+object Day1P1 {
   def main(args: Array[String]): Unit = {
     val lines =
-      Files.readString(Paths.get(getClass.getResource("flag1.txt").toURI))
+      Files.readString(Paths.get(getClass.getResource("day1.txt").toURI))
     val digitsInEachLine = lines
       .split('\n')
       .map(line =>
